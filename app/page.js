@@ -155,7 +155,7 @@ export default function Home() {
 		handleFetch('push');
 	}
 
-	const handleFetch =async(type)=>{
+	const handleFetch = useCallback(async (type)=>{
 		let { data: menus, error } = await supabase
 			.from('menus')
 			.select(`id, name, price, photo_url, restaurants(name, category, naver_id)`)
@@ -170,7 +170,7 @@ export default function Home() {
 			setList(prevList => [...prevList, ...menus]);
 		}
 		setLoading(false);
-	}
+	},[])
 
 	const bottomRef = useCallback(
 		(node) => {
@@ -240,7 +240,7 @@ export default function Home() {
 				<Alert severity="info" color="warning" sx={[{transition:'0.2s',borderRadius:'0.8rem',backgroundColor:'#fff5f3',margin:'0 0.8rem'},loading && {borderBottomLeftRadius:0,borderBottomRightRadius:0}]}>정확한 메뉴 정보는 클릭해서 확인할 수 있어요.</Alert>
 				{ loading && <BorderLinearProgress/> }
 				<div css={menus_container}>
-				{ (!loading && list) && list.map((e,i)=> { return <EachMenuLink {...{e,i}}/> } ) }
+				{ (!loading && list) && list.map((e,i)=> { return <EachMenuLink key={e.id.toString()+i} {...{e,i}}/> } ) }
 				</div>
 				{list.length!==0 && <div ref={bottomRef}/>}
 			</div>

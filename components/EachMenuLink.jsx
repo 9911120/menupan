@@ -3,6 +3,7 @@
 "use client"
 
 import {css} from "@emotion/react"
+import Image from "next/image";
 import Chip from '@mui/material-next/Chip';
 
 const control_board_chip_label = css`
@@ -56,9 +57,9 @@ const each_menu_name_restaurant = css`
 
 const EachMenuLink =({e,i})=>{
     return(
-        <a href={`https://m.place.naver.com/restaurant/${e.restaurants.naver_id}/home`} target="_blank" rel="noreferrer noopener" key={e.id.toString()+i}>
+        <a href={`https://m.place.naver.com/restaurant/${e.restaurants.naver_id}/home`} target="_blank" rel="noreferrer noopener">
             <div css={each_menu}>
-                {e.photo_url && <img css={each_menu_photo} src={e.photo_url} alt="menu_photo"/>}
+                {e.photo_url && <Image width={500} height={500} css={each_menu_photo} src={e.photo_url} alt="menu_photo"/>}
                 <div css={each_menu_info_container}>
                     <div css={each_menu_price}>{e.price.toLocaleString()}원</div>
                     <div css={each_menu_names_container}>
