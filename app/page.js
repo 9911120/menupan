@@ -50,6 +50,7 @@ const app_title = css`
 	font-size:2rem;
 	font-family: "WAGURITTF", sans-serif;
 	color:#ff6842;
+	font-weight:normal;
 `;
 const control_board_floating = css`
 	@media (min-width:701px){display:none;}
