@@ -171,7 +171,7 @@ export default function Home() {
 			setList(prevList => [...prevList, ...menus]);
 		}
 		setLoading(false);
-	},[])
+	},[priceRange,getSearchOptions,getRandomIdsArray])
 
 	const bottomRef = useCallback(
 		(node) => {
