@@ -27,6 +27,7 @@ const each_menu = css`
 `;
 const each_menu_photo = css`
 	width:100%;
+	height:100% !important;
 	border-radius:0.6rem;
 	margin-bottom:0.4rem;
 `;
