@@ -46,7 +46,7 @@ export default function RootLayout({ children }) {
 	return (
 		<html>
 			<body>{children}</body>
-			{process.env.NODE_ENV !== 'development' && <GoogleAnalytics gaId={process.env.NEXT_PUBLIC_GA_ID} />}
+			{process.env.NODE_ENV !== 'development' && <GoogleAnalytics gaId={process.env.GA_ID} />}
 		</html>
 	);
 }
