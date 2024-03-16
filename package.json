@@ -15,6 +15,7 @@
     "@mui/lab": "^5.0.0-alpha.168",
     "@mui/material": "^5.15.13",
     "@mui/material-next": "^6.0.0-alpha.126",
+    "@next/third-parties": "^14.0.5-canary.59",
     "@supabase/supabase-js": "^2.39.8",
     "framer-motion": "^11.0.14",
     "lodash": "^4.17.21",

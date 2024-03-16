@@ -1,8 +1,9 @@
 import '@/styles/global.css';
+import { GoogleAnalytics } from '@next/third-parties/google'
 
 export const metadata = {
 	title: "신촌 메뉴판",
-	description: "신촌 맛집 메뉴 가격별 모아보기",
+	description: "신촌 맛집 메뉴들 가격별로 모아보기",
 	applicationName: '신촌 메뉴판',
 	referrer: 'origin-when-cross-origin',
 	icons: [
@@ -26,7 +27,7 @@ export const metadata = {
 	],
 	openGraph: {
 		title: '신촌 메뉴판',
-		description: '신촌 맛집 모든 메뉴들을 한 눈에',
+		description: '신촌 맛집 메뉴들 가격별로 모아보기',
 		type: 'website',
 		url: 'https://menupan.xyz',
 		siteName: '신촌 메뉴판',
@@ -45,6 +46,7 @@ export default function RootLayout({ children }) {
 	return (
 		<html>
 			<body>{children}</body>
+			{process.env.NODE_ENV !== 'development' && <GoogleAnalytics gaId={process.env.NEXT_PUBLIC_GA_ID} />}
 		</html>
 	);
 }
