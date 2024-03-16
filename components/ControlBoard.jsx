@@ -29,12 +29,14 @@ const control_board_price_container = css`
 const control_board_chip_label = css`
 	color:#663c00;
 	font-weight:bold;
+    font-family:'Pretendard',sans-serif;
 `;
 const control_board_checkbox_container = css`
 	margin-top:1rem;
 `;
 const control_board_checkbox_label = css`
 	font-size:0.9rem;
+    font-family:'Pretendard',sans-serif;
 `;
 const control_board_button_container = css`
 	margin-top:1rem;
@@ -81,7 +83,7 @@ const ControlBoard =({loading, priceRange, handleChangeRange, handleSearch,
                 </FormGroup>
             </div>
             <div css={control_board_button_container}>
-                <LoadingButton onClick={handleSearch} loading={loading} variant="contained" sx={{width:'100%',fontSize:'1rem',borderRadius:'0.8rem',backgroundColor:'#ff6842',"&:hover":{backgroundColor:'#ff4d20'}}} disableElevation>검색하기</LoadingButton>
+                <LoadingButton onClick={handleSearch} loading={loading} variant="contained" sx={{fontFamily:'Pretendard',width:'100%',fontSize:'1rem',borderRadius:'0.8rem',backgroundColor:'#ff6842',"&:hover":{backgroundColor:'#ff4d20'}}} disableElevation>검색하기</LoadingButton>
             </div>
         </div>
     )

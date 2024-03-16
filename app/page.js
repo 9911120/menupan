@@ -237,7 +237,7 @@ export default function Home() {
 					<Masthead/>
 			</div>
 			<div css={right_view}>
-				<Alert severity="info" color="warning" sx={[{transition:'0.2s',borderRadius:'0.8rem',backgroundColor:'#fff5f3',margin:'0 0.8rem'},loading && {borderBottomLeftRadius:0,borderBottomRightRadius:0}]}>정확한 메뉴 정보는 클릭해서 확인할 수 있어요.</Alert>
+				<Alert severity="info" color="warning" sx={[{transition:'0.2s',borderRadius:'0.8rem',backgroundColor:'#fff5f3',margin:'0 0.8rem',fontFamily:'Pretendard'},loading && {borderBottomLeftRadius:0,borderBottomRightRadius:0}]}>정확한 메뉴 정보는 클릭해서 확인할 수 있어요.</Alert>
 				{ loading && <BorderLinearProgress/> }
 				<div css={menus_container}>
 				{ (!loading && list) && list.map((e,i)=> { return <EachMenuLink key={e.id.toString()+i} {...{e,i}}/> } ) }

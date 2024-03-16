@@ -9,6 +9,7 @@ import Chip from '@mui/material-next/Chip';
 const control_board_chip_label = css`
 	color:#663c00;
 	font-weight:bold;
+    font-family:'Pretendard',sans-serif;
 `;
 const each_menu = css`
 	padding:0.8rem 0.8rem 1rem 0.8rem;
@@ -60,7 +61,7 @@ const EachMenuLink =({e,i})=>{
     return(
         <a href={`https://m.place.naver.com/restaurant/${e.restaurants.naver_id}/home`} target="_blank" rel="noreferrer noopener">
             <div css={each_menu}>
-                {e.photo_url && <Image width={500} height={500} css={each_menu_photo} src={e.photo_url} alt="menu_photo"/>}
+                {e.photo_url && <img css={each_menu_photo} src={e.photo_url} alt="menu_photo"/>}
                 <div css={each_menu_info_container}>
                     <div css={each_menu_price}>{e.price.toLocaleString()}원</div>
                     <div css={each_menu_names_container}>
