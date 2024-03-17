@@ -44,15 +44,15 @@ a {
 	text-decoration:none;
 }
 
-.css-7gyzwo-MuiSlider-root.Mui-disabled{
+.css-i7w91r.Mui-disabled{
 	color:#FA792D !important;
 	opacity:0.5 !important;
 }
-.css-1ggqnc0-MuiButtonBase-root-MuiButton-root-MuiLoadingButton-root.Mui-disabled{
+.css-b2pa4i.Mui-disabled{
 	background:#FA792D !important;
 	opacity:0.5 !important;
 }
-.css-j204z7-MuiFormControlLabel-root .MuiFormControlLabel-label.Mui-disabled{
+.css-9l3uo3.Mui-disabled{
 	color:#FFF !important;
 	opacity:0.5 !important;
 }
