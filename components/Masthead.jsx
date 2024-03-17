@@ -8,7 +8,7 @@ import Zoom from '@mui/material/Zoom';
 
 const masthead = css`
 	font-size:0.8rem;
-	color:#aaa;
+	color:#F3C600;
 	text-align:center;
 	line-height:1.6;
 	display:flex;

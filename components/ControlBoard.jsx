@@ -15,9 +15,9 @@ const control_board = css`
 	margin:2.2rem 0.8rem 1.5rem 0.8rem;
 	padding: 1.2rem 0.8rem 0.8rem 0.8rem;
 	border-radius:1.2rem;
-	border:1px solid #ffd2c6;
-	background:#fff5f3;
-	color:#663c00;
+	border:1px solid #83493a;
+	background:#1e0500;
+	color:#fff;
 `;
 const control_board_price_container = css`
     margin-top:0.2rem;
@@ -27,16 +27,16 @@ const control_board_price_container = css`
 	gap:0.6rem;
 `;
 const control_board_chip_label = css`
-	color:#663c00;
+	color:#000;
 	font-weight:bold;
     font-family:'Pretendard',sans-serif;
 `;
 const control_board_slider_style_option = {
     marginTop:'1.1rem',
-    color: '#ff6842',
+    color: '#FA792D',
     transition:'0.2s',
     '& .MuiSlider-valueLabel': {
-        backgroundColor: '#ff6842'
+        backgroundColor: '#FA792D'
     },
     '& .MuiSlider-thumb':{
         '&:focus, &:hover, &.Mui-active, &.Mui-focusVisible': {
@@ -48,7 +48,13 @@ const control_board_checkbox_container = css`
 	margin-top:0.6rem;
     margin-left:0.4rem;
 `;
-const control_board_checkbox_style_option = { color:'#ff6842','&.Mui-checked': { color:'#ff6842'} }
+const control_board_checkbox_style_option = { 
+    color:'#FA792D',
+    '& .MuiFormControlLabel-label.Mui-disabled':{
+        color:'#FFF !important'
+    },
+    '&.Mui-checked': { color:'#FA792D'}
+}
 const control_board_checkbox_label = css`
 	font-size:0.9rem;
     font-family:'Pretendard',sans-serif;
@@ -61,7 +67,9 @@ const control_board_button_style_option = {
     width:'100%',
     fontSize:'1rem',
     borderRadius:'0.8rem',
-    backgroundColor:'#ff6842',
+    backgroundColor:'#FA792D',
+    color:'#000',
+    fontWeight:'700',
     "&:hover":{
         backgroundColor:'#ff4d20'
     }

@@ -22,6 +22,8 @@ footer, header, hgroup, menu, nav, section {
 body {
 	line-height: 1;
 	font-family: 'Pretendard';
+	background:#000;
+	color:#FFF;
 }
 ol, ul {
 	list-style: none;
@@ -40,4 +42,17 @@ table {
 }
 a {
 	text-decoration:none;
+}
+
+.css-7gyzwo-MuiSlider-root.Mui-disabled{
+	color:#FA792D;
+	opacity:0.5;
+}
+.css-1ggqnc0-MuiButtonBase-root-MuiButton-root-MuiLoadingButton-root.Mui-disabled{
+	background:#FA792D;
+	opacity:0.5;
+}
+.css-j204z7-MuiFormControlLabel-root .MuiFormControlLabel-label.Mui-disabled{
+	color:#FFF;
+	opacity:0.5;
 }
