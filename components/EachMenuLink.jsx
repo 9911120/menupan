@@ -3,7 +3,7 @@
 "use client"
 
 import {css} from "@emotion/react"
-// import Image from "next/image";
+import Image from "next/image";
 import Chip from '@mui/material-next/Chip';
 import Rating from '@mui/material/Rating';
 import StarIcon from '@mui/icons-material/Star';
@@ -22,6 +22,10 @@ const each_menu = css`
 	&:hover{
 		transform: translateY(-0.4rem);
     	box-shadow: rgba(250, 121, 45, 0.2) 0 5px 24px;
+		@media (max-width:700px){
+			transform: unset;
+			box-shadow: unset;
+		}
 	}
 	@media (max-width:700px){
 		border-radius:0;
@@ -90,7 +94,7 @@ const EachMenuLink =({e,i})=>{
     return(
         <a href={e.restaurants.kakao_id ? `https://place.map.kakao.com/m/${e.restaurants.kakao_id}` : `https://m.place.naver.com/restaurant/${e.restaurants.naver_id}/home`} target="_blank" rel="noreferrer noopener">
             <div css={each_menu}>
-                {e.photo_url && <img css={each_menu_photo} src={e.photo_url} alt="menu_photo"/>}
+                {e.photo_url && <Image placeholder="blur" blurDataURL="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mOUqwcAAMEAnwarUJAAAAAASUVORK5CYII=" width={500} height={500} css={each_menu_photo} src={e.photo_url} alt="menu_photo"/>}
                 <div css={each_menu_info_container}>
                     <div css={each_menu_price}>
 						<div>{e.price.toLocaleString()}원</div>
