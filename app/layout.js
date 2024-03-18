@@ -47,10 +47,10 @@ export const metadata = {
 export default function RootLayout({ children }) {
 	return (
 		<html>
-			<Head>
+			<body>
 				<Script strategy='beforeInteractive' src="/escape_inapp_browser.js"/>
-			</Head>
-			<body>{children}</body>
+				{children}
+			</body>
 			{process.env.NODE_ENV !== 'development' && <GoogleAnalytics gaId={process.env.GA_ID} />}
 		</html>
 	);
