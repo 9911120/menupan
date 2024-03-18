@@ -1,6 +1,6 @@
 import '@/styles/global.css';
 import { GoogleAnalytics } from '@next/third-parties/google'
-import Head from 'next/document';
+import Head from 'next/head';
 import Script from 'next/script';
 
 export const metadata = {
