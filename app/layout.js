@@ -1,5 +1,7 @@
 import '@/styles/global.css';
 import { GoogleAnalytics } from '@next/third-parties/google'
+import Head from 'next/document';
+import Script from 'next/script';
 
 export const metadata = {
 	title: "신촌 메뉴판",
@@ -45,6 +47,9 @@ export const metadata = {
 export default function RootLayout({ children }) {
 	return (
 		<html>
+			<Head>
+				<Script strategy='beforeInteractive' src="/escape_inapp_browser.js"/>
+			</Head>
 			<body>{children}</body>
 			{process.env.NODE_ENV !== 'development' && <GoogleAnalytics gaId={process.env.GA_ID} />}
 		</html>
