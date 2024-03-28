@@ -246,7 +246,30 @@ export default function Home() {
 				<Alert severity="info" color="warning" sx={[{alignItems:'center',transition:'0.2s',borderRadius:'0.8rem',backgroundColor:'#1e0500',border:'1px solid #83493a',color:'#fff',margin:'0 0.8rem',fontFamily:'Pretendard',textAlign:'left'},loading && {borderBottomLeftRadius:0,borderBottomRightRadius:0}]}>메뉴를 클릭하시면 카카오맵 페이지가 열립니다.<br/>별점/리뷰 수 데이터는 카카오맵 기준입니다.<br/><span style={{opacity:'0.4'}}>3월 17일 00시 기준</span></Alert>
 				{ loading && <BorderLinearProgress/> }
 				<div css={menus_container}>
-				{ (!loading && list) && list.map((e,i)=> { return <EachMenuLink key={e.id.toString()+i} {...{e,i}}/> } ) }
+				{ (!loading && list) && list.map((e,i)=> {
+					return (
+						<div key={e.id.toString()+i}>
+							{(i%12===0&&i!==0)&&
+								<iframe
+									style={{
+										width:'100%',
+										maxWidth:'inherit',
+										marginBottom:'0.8rem',
+										borderRadius:'0.4rem'
+									}}
+									src="https://ads-partners.coupang.com/widgets.html?id=663849&template=carousel&trackingCode=AF2582906&subId=&width=680&height=140&tsource="
+									width="680"
+									height="140"
+									frameBorder="0"
+									scrolling="no"
+									referrerPolicy="unsafe-url"
+									browsingtopics
+								/>
+							}
+							<EachMenuLink {...{e,i}}/>
+						</div>
+					)
+				} ) }
 				</div>
 				{list.length!==0 && <div ref={bottomRef}/>}
 			</div>
